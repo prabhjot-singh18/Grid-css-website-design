@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 200px;
+        }
+
+        .list ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+
+        .first {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            left: -70px;
+        }
+
+        .first :first-child {
+            height: 60px;
+            width: 200px;
+        }
+
+        .tex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tex h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: "b1 b2 b3";
+            gap: 30px;
+        }
+
+        .box1 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b1;
+            height: 220px;
+            width: 280px;
+            position: relative;
+            padding-top: px;
+            text-align: center;
+
+        }
+
+        .box2 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b2;
+            height: 220px;
+            width: 280px;
+            text-align: center;
+
+        }
+
+        .box3 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b3;
+            height: 220px;
+            width: 280px;
+            text-align: center;
+
+        }
+
+        .box1 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box1 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+        .box2 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box2 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+        .box3 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box3 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+
+
+
+
+
+
+
+
+
+        .line2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: "b1 b2 b3";
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .box4 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b1;
+            height: 220px;
+            width: 280px;
+            position: relative;
+            padding-top: px;
+            text-align: center;
+
+        }
+
+        .box5 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b2;
+            height: 220px;
+            width: 280px;
+            text-align: center;
+
+        }
+
+        .box6 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b3;
+            height: 220px;
+            width: 280px;
+            text-align: center;
+
+        }
+
+        .box4 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box4 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+        .box5 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box5 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+        .box6 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box6 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+
+
+
+        .line3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: "b1 b2 b3";
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .box7 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b1;
+            height: 220px;
+            width: 280px;
+            position: relative;
+            padding-top: px;
+            text-align: center;
+
+        }
+
+        .box8 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b2;
+            height: 220px;
+            width: 280px;
+            text-align: center;
+
+        }
+
+        .box9 {
+            background-color: rgba(197, 202, 201, 0.208);
+            grid-area: b3;
+            height: 220px;
+            width: 280px;
+            text-align: center;
+
+        }
+
+        .box7 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box7 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+        .box8 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box8 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+
+        .box9 span {
+            background-color: rgb(71, 208, 71);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            display: flex;
+            position: absolute;
+            transform: translate(25%, 50%);
+        }
+
+        .box9 p {
+            font-size: 7px;
+            text-align: center;
+            position: relative;
+            transform: translate(1%, 844%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png" alt=""></div>
+        <div class="list">
+            <ul>
+                <li>Products</li>
+                <li>For business</li>
+                <li>Resources</li>
+                <li>Academic licensing</li>
+                <li>Our company</li>
+            </ul>
+        </div>
+    </div>
+    <div class="first">
+        <div><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png" alt=""></div>
+        <div class="tex">
+            <h2>Download&nbsp;UltraEdit</h2>
+            <p>v2024.3.0.15 (released 2025-04-25) | Hotfix information</p>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="line1">
+            <div class="box1">
+                <h2>English</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+            <div class="box2">
+                <h2>Deutsch</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+            <div class="box3">
+                <h2>Italiano</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+        </div>
+
+
+        <div class="line2">
+            <div class="box4">
+                <h2>Español</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+            <div class="box5">
+                <h2>français</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+            <div class="box6">
+                <h2>Português brasileiro</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+        </div>
+
+
+        <div class="line3">
+            <div class="box7">
+                <h2>日本</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+            <div class="box8">
+                <h2>한국어</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+            <div class="box9">
+                <h2>华语</h2>
+                <span>Download 64-bit</span>
+                <p>SHA256</p>
+                <p>F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E9</p>
+                <p>3292D91AE27</p>
+            </div>
+        </div>
+</din>
+    </div>
+    </div>
+</body>
+
+</html>
