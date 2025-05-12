@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: black;
+            height: 400px;
+            width: 70vw;
+            display: flex;
+            align-items: end;
+        }
+
+        .ball {
+            background-color: rgb(255, 0, 0);
+            height: 70px;
+            width: 70px;
+            border-radius: 80px;
+            animation: prabhuX 3s linear infinite,
+            prabhuY 1s ease-out infinite alternate;
+            position: relative;
+        }
+
+        @keyframes prabhuX {
+            from {
+
+                left: 0%;
+            }
+
+            to {
+
+                left: 100%;
+            }
+
+        }
+
+        @keyframes prabhuY {
+            from {
+                bottom: 0%;
+            }
+
+            to {
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball animation"></div>
+    </div>
+</body>
+
+</html>
