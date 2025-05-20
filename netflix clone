@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .photo {
+            background-color: black;
+            height: 80vh;
+            width: 100vw;
+
+        }
+
+        .cover img {
+            height: 80vh;
+            width: 100vw;
+            filter: opacity(0.5);
+            display: flex;
+            object-fit: cover;
+            background-position: center center;
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav img {
+            height: 100px;
+            width: 100px;
+        }
+
+        button {
+            height: 30px;
+            background-color: rgb(255, 0, 0);
+            padding: 6px 16px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .buts {
+            display: flex;
+            gap: 30px;
+        }
+
+        .text {
+            position: absolute;
+            z-index: 2;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .t1 h1 {
+            font-size: clamp(25px, 4vw, 43px);
+            text-align: center;
+            line-height: 1.2;
+
+        }
+
+        .text :nth-child(2) {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .text :nth-child(3) {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .ebox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .ebox input {
+            background-color: black;
+            padding: 1.2% 3%;
+            filter: opacity(.8);
+        }
+
+        .ebox button {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.3% 4%;
+            border-radius: 0px;
+            white-space: nowrap;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .side2 {
+            background-color: black;
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .patti {
+            background-color: rgb(79, 74, 74);
+            height: .7vh;
+            width: 100vw;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15%;
+            width: 100%;
+            padding: 50px;
+        }
+
+
+
+        .g1 h1 {
+            font-size: clamp(24px, 4vw, 48px);
+            color: white;
+        }
+
+        .g1 p {
+            font-size: clamp(1px, 1vw, 28px);
+            color: white;
+        }
+
+        .g2 {
+            display: grid;
+            grid-template-areas: "b1 b2";
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            width: 100%;
+            max-width: 600px;
+
+        }
+
+        .g2 video {
+            display: grid;
+            grid-area: b1;
+            margin-left: 12%;
+            margin-bottom: 13%;
+            width: 80%;
+            height: auto;
+
+        }
+
+        .g2 img {
+            display: grid;
+            grid-area: b1;
+            margin-bottom: 10%;
+            width: 100%;
+            height: auto;
+        }
+
+
+        .side3 {
+            background-color: black;
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .patti2 {
+            background-color: rgb(79, 74, 74);
+            height: .7vh;
+            width: 100vw;
+        }
+
+        .grid2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 50px;
+        }
+
+
+
+        .g11 h1 {
+            font-size: clamp(20px, 5vw, 48px);
+            color: white;
+        }
+
+        .g11 p {
+            font-size: clamp(14px, 3vw, 24px);
+            color: white;
+        }
+
+        .g22 img {
+
+            margin-left: -60px;
+            display: grid;
+            grid-template-areas: "b1 b2";
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .side4 {
+            background-color: black;
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .patti3 {
+            background-color: rgb(79, 74, 74);
+            height: .7vh;
+            width: 100vw;
+        }
+
+        .grid3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3%;
+            width: 100%;
+            padding: 50px;
+        }
+
+
+
+        .g111 h1 {
+            font-size: clamp(34px, 5vw, 68px);
+            color: white;
+        }
+
+        .g111 p {
+            font-size: clamp(8px, 2vw, 68px);
+            color: white;
+        }
+
+        .g222 {
+            display: grid;
+            grid-template-areas: "b1 b2";
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            width: 100%;
+            max-width: 600px;
+
+        }
+
+        .g222 video {
+            display: grid;
+            grid-area: b1;
+            margin-left: 12%;
+            margin-bottom: 13%;
+            width: 87%;
+            height: auto;
+
+        }
+
+        .g222 img {
+            display: grid;
+            grid-area: b1;
+            margin-bottom: 10%;
+            width: 100%;
+            height: auto;
+            z-index: 2;
+        }
+
+         .side5 {
+            background-color: black;
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .patti4 {
+            background-color: rgb(79, 74, 74);
+            height: .7vh;
+            width: 100vw;
+        }
+
+        .grid4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 50px;
+        }
+
+
+
+        .g1111 h1 {
+            font-size: clamp(10px, 5vw, 48px);
+            color: white;
+        }
+
+        .g1111 p {
+            font-size: clamp(5px, 2vw, 34px);
+            color: white;
+        }
+
+        .g2222 img {
+
+            margin-left: -60px;
+            display: grid;
+            grid-template-areas: "b1 b2";
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+         .patti5 {
+            background-color: rgb(79, 74, 74);
+            height: .7vh;
+            width: 100vw;
+        }
+
+          .patti6 {
+            background-color: rgb(79, 74, 74);
+            height: .7vh;
+            width: 100vw;
+        }
+
+        .side6 {
+            background-color: black;
+            height: 90vh;
+            width: 100vw;
+
+        }
+
+        .faq h1 {
+            font-size: clamp(1rem, 5vw, 2.8rem);
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            font-size: clamp(1rem, 1.8vw, 2rem);
+
+        }
+
+        .box1 {
+            height: 13vh;
+            width: 65vw;
+            background-color: rgba(80, 78, 78, 0.674);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-between;
+
+        }
+
+        .box2 {
+            height: 13vh;
+            width: 65vw;
+            background-color: rgba(80, 78, 78, 0.674);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-between;
+
+
+        }
+
+        .box3 {
+            height: 13vh;
+            width: 65vw;
+            background-color: rgba(80, 78, 78, 0.674);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-between;
+
+
+        }
+
+        .box4 {
+            height: 13vh;
+            width: 65vw;
+            background-color: rgba(80, 78, 78, 0.674);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-between;
+
+
+
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="photo">
+        <div class="nav"><img src="images/logo.svg" alt="">
+            <div class="buts">
+                <button>English</button>
+                <button>sign in</button>
+            </div>
+        </div>
+        <div class="cover"> <img src="images/bg.jpg" alt=""></div>
+        <div class="black"></div>
+        <div class="text">
+            <div class="t1">
+                <h1>Enjoy big movies, hit series and more from ₹ 149.</h1>
+            </div>
+            <p>Join today. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="ebox">
+                <input type="text" placeholder="Email Address" style="color: rgb(255, 255, 255);">
+                <button style=font-size:clamp(14px,2vw,22px);>Get Started > </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="patti"></div>
+    <div class="side2">
+        <div class="grid">
+            <div class="g1" style="color: white;">
+                <h1>Enjoy on your TV</h1>
+                <p>Watch on smart TVs, PlayStation, Xbox, chromecast <br> Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div class="g2"><video
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                    autoplay loop muted></video>
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="patti2"></div>
+    <div class="side3">
+        <div class="grid2">
+
+            <div class="g22">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                    alt="">
+            </div>
+            <div class="g11" style="color: white;">
+                <h1>Download your <br> shows to watch <br> offline </h1>
+                <p>Save your favourites easily and always <br> have something to watch.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="patti3"></div>
+    <div class="side4">
+        <div class="grid3">
+            <div class="g111" style="color: white;">
+                <h1>Watch everywhere</h1>
+                <p>Stream unlimited movies and TV shows on <br> your phone, tablet, laptop, and TV.</p>
+            </div>
+            <div class="g222"> <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+                    alt="">
+                <video
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                    autoplay loop muted></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="patti4"></div>
+    <div class="side5">
+        <div class="grid4">
+
+            <div class="g2222">
+                <img src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                    alt="">
+            </div>
+            <div class="g1111" style="color: white;">
+                <h1>Create profiles for <br> kids</h1>
+                <p>Send children on adventures with their <br> favourite characters in a space made just <br> for
+                    them—free with your membership.</p>
+            </div>
+        </div>
+    </div>
+
+  <div class="patti6"></div>
+    <div class="side6">
+        <div class="box">
+            <div class="faq">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+            <div class="boxes">
+                <div class="box1">
+                    <p>What is NetFlix</p>
+                    <p>+</p>
+                </div>
+                <div class="box2">
+                    <p>How much does Netflix cost?</p>
+                    <p>+</p>
+                </div>
+                <div class="box3">
+                    <p>What can I watch on Netflix?</p>
+                    <p>+</p>
+                </div>
+                <div class="box4">
+                    <p>Where can I watch?</p>
+                    <p>+</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
